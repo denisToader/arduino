@@ -8,7 +8,7 @@ AccelStepper motor(AccelStepper:: DRIVER, step_pin, dir_pin);
 
 void setup() {
   // put your setup code here, to run once:
-  motor.maxSpeed(100);
+  motor.setSpeed(100);
   motor.setMaxSpeed(100);
   motor.setAcceleration(100);
 }
@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if(motor.distanceToGo() == 0) {
-    int dir = rand()%2;
+    int dir = rand() % 2;
     if(dir ==0)
       motor.move(100);
      else
